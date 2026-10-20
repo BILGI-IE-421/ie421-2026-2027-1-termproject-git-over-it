@@ -13,8 +13,8 @@ Refugee populations are not equally distributed around the world. Some countries
 ## The data
 
 | Dataset | Link | What is in it |
-
-|UNHCR Refugee Data | https://www.kaggle.com/datasets/unitednations/refugee-data | Contains refugee population data by country of origin, country of asylum, and year.|
+|---------|------|---------------|
+| UNHCR Refugee Data | [Kaggle](https://www.kaggle.com/datasets/unitednations/refugee-data) | Contains refugee population data by country of origin, country of asylum, and year. |
 | | | |
 | | | |
 
