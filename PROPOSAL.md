@@ -26,6 +26,7 @@ What is the global distribution of refugees across countries of origin and asylu
 2. RQ2 — Host Country Characteristics
 
 How are refugee populations related to the population sizes and economic conditions of host countries?
+
 3. RQ3 — Internal Displacement
 
 How do the scale and drivers of internal displacement vary across major refugee-origin countries?
