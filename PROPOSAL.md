@@ -1,10 +1,10 @@
 # Your project title
 
-**Team:** your-team-name · **Theme:** T? Theme name
+**Team:** git-over-it · **Theme:** T2 People on the Move
 
-**Members:** Name Surname (Student ID) · Name Surname (Student ID) · Name Surname (Student ID)
+**Members:** Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (123203104)
 
-<!-- Keep this page to one screen: you present your 3-minute pitch from it in class. Replace the italic lines, then delete this comment. -->
+
 
 ## The problem
 
