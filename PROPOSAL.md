@@ -17,6 +17,7 @@ Refugee populations are not equally distributed around the world. Some countries
 | UNHCR Refugee Data | [Kaggle](https://www.kaggle.com/datasets/unitednations/refugee-data) | Contains refugee population data by country of origin, country of asylum, and year. |
 | World Bank Population | [Total Population](https://data.worldbank.org/indicator/SP.POP.TOTL) | Annual total population data by country, allowing comparisons of refugee populations relative to host-country population sizes. |
 | World Bank GDP per Capita | [GDP per capita (current US$)](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD) | Annual GDP per capita data by country, measured in current US dollars, allowing comparisons of host countries' economic conditions. |
+| IDMC Global Internal Displacement Database | [IDMC Displacement Data](https://www.internal-displacement.org/database/displacement-data/) | Country-level internal displacement data, including displacement figures, event types, conflict- and disaster-related causes, weather-related hazards, and annual trends. |
 
 ## Our questions
 
