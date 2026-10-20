@@ -8,7 +8,7 @@
 
 ## The problem
 
-_Three or four sentences: what do you want to find out, and why is it worth knowing?_
+Refugee populations are not equally distributed around the world. Some countries host large numbers of refugees, while others are the main countries refugees come from. These patterns can change over time, and host countries have different population sizes and economic conditions. At the same time, many people are forced to leave their homes but remain within their own countries. Understanding these differences can help us better understand the global refugee situation and the challenges faced by different countries.
 
 ## The data
 
