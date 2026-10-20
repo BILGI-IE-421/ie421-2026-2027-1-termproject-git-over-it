@@ -21,14 +21,14 @@ Refugee populations are not equally distributed around the world. Some countries
 
 ## Our questions
 
-1. RQ1 — Global Distribution
+1. Global Distribution
 
 What is the global distribution of refugees across countries of origin and asylum, and how has it changed over time?
 
-2. RQ2 — Host Country Characteristics
+2. Host Country Characteristics
 
 How are refugee populations related to the population sizes and economic conditions of host countries?
 
-3. RQ3 — Internal Displacement
+3. Internal Displacement
 
 How do the scale and drivers of internal displacement vary across major refugee-origin countries?
