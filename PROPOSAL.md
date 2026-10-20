@@ -19,6 +19,13 @@ _Three or four sentences: what do you want to find out, and why is it worth know
 
 ## Our questions
 
-1. _First question_
-2. _Second question_
-3. _Third question_
+1. RQ1 — Global Distribution
+
+What is the global distribution of refugees across countries of origin and asylum, and how has it changed over time?
+
+2. RQ2 — Host Country Characteristics
+
+How are refugee populations related to the population sizes and economic conditions of host countries?
+3. RQ3 — Internal Displacement
+
+How do the scale and drivers of internal displacement vary across major refugee-origin countries?
