@@ -4,6 +4,10 @@ List every use of an AI assistant (ChatGPT, Claude, Copilot, Gemini, etc.) in th
 
 | Date | Tool | Task (what you asked) | Where it is used (file/section) | What you verified and how |
 |---|---|---|---|---|
-| 2026-11-18| | | | |
-
+| 2026-11-18|ChatGPT (GPT-6)|Provide the required Python library installation commands for pandas, NumPy, requests, kagglehub, and openpyxl. | | |
+| 2026-11-18|ChatGPT (GPT-6) |Troubleshoot the dataset download script for Google Colab, including replacing the __file__-based directory path with an explicit project path. | | |
+| 2026-11-18|ChatGPT (GPT-6) |Debug the data preparation script, including handling Colab command-line arguments, correcting file paths, and resolving Python indentation and syntax errors. | | |
+| 2026-11-18|ChatGPT (GPT-6) |Explain and organize the data cleaning results, dataset dimensions, missing values, duplicate records, and dataset integration results. | | |
+| 2026-11-18|ChatGPT (GPT-6) |Help structure the documentation for all six processed datasets and suggest a GitHub Markdown layout with collapsible sections. | | |
+| 2026-11-18|ChatGPT (GPT-6) |Provide guidance on creating the visual/ folder and uploading visualization files to GitHub. | | |
 Sections written entirely in our own words: data card, limitations, conclusions.
