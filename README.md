@@ -24,7 +24,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 ```
 pip install -r requirements.txt
 python scripts/download_data.py
-python scripts/preprocess.py
+python scripts/preprocess_data.py
 python scripts/figures.py
 ```
 
