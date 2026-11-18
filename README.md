@@ -11,6 +11,9 @@ Ultimately, this project aims to a better understanding of global migration dyna
 ## Group Members
 Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (123203104)
 
+## Project Website
+
+[The Global Refugee Landscape: Origins, Hosts, and Internal Displacement](https://8767-m-s-use1b11-2x2n6fajjluzt-b.us-east1.prod.r.colab.dev/index.html#research)
 ## Files (Explain each of them with a sentence)
 - `data/`: Contains the datasets used. (Define your datasets here. The full description goes in the data card, `data/README.md`. Raw downloads stay in `data/raw/` and are not committed.)
 - `scripts/`: Scripts for downloading, cleaning and plotting the data. (Explain which script does what.)
