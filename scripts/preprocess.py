@@ -136,7 +136,7 @@ YEARS = [str(year) for year in range(2008, 2017)]
 IDENTIFIERS = ["Country Name", "Country Code", "Indicator Code"]
 INDICATORS = {
     "SP.POP.TOTL": "total_population",
-    "NY.GDP.PCAP.CD": "gdp_per_capita_current_usd",
+    "NY.GDP.PCAP.CD": "gdp_per_capita_ppp",
 }
 
 
