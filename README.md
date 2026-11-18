@@ -17,7 +17,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 - `data/`: Contains the datasets used in our project. Raw data is stored in `data/raw/`, while cleaned datasets are used for analysis.`unhcr_clean.csv`: Contains cleaned refugee data from 2008 to 2016, including host countries, origin countries, refugee counts, and ISO3 codes.
 `data/README.md`: Provides detailed information about the datasets, their sources, and how they are prepared.
 - `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data.
-- - `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC.
+- `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC.
 - `preprocess_data.py`: Cleans and prepares the datasets for analysis, including standardizing country codes.
 - `eda_notebook.ipynb`: Explores the UNHCR dataset, checks missing values, compares refugee-hosting and refugee-origin countries, and creates a heatmap and grouped bar chart.
 - `visual/`: Figure 1: Shows the changes in refugee populations across the top five refugee-hosting countries between 2008 and 2016. Figure 2: Shows the annual changes in refugee populations originating from the top five refugee-origin countries between 2008 and 2016.
