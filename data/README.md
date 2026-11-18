@@ -1,6 +1,6 @@
 # Data card
 
-This project uses four datasets from three main sources: UNHCR refugee data (Dataset 1), World Bank population and GDP per capita data (Datasets 2 and 3), and IDMC internal displacement data (Dataset 4). The analysis covers the period from 2008 to 2016. After cleaning and standardizing the data, six CSV files were produced: four cleaned datasets and two merged datasets combining UNHCR data with World Bank indicators and IDMC displacement data. The final section explains how these datasets are combined. The raw files are not included in the repository; "scripts/download_data.py" is used to download the source data into the "data/raw/" folder.
+This project uses four datasets from three sources: UNHCR refugee data (Dataset 1), World Bank population and GDP per capita data (Datasets 2 and 3), and IDMC internal displacement data (Dataset 4). The analysis covers 2008–2016 and produces six cleaned and merged CSV files. The final section explains how the datasets are combined. Raw data is downloaded into "/content/IE421/data/raw/" using "scripts/download_data.py" and is not included in the repository.
 
 ## Dataset 1: Dataset name (`file-name.csv`)
 - **Source and URL:**
