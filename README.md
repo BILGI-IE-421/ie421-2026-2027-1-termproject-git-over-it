@@ -16,7 +16,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 ## Files (Explain each of them with a sentence)
 - `data/`: Contains the datasets used. (Define your datasets here. The full description goes in the data card, `data/README.md`. Raw downloads stay in `data/raw/` and are not committed.)
 - `scripts/`: Scripts for downloading, cleaning and plotting the data. (Explain which script does what.)
-- `visuals/`: Includes the generated figures. (Explain which figure shows what.)
+- `visual/`: Figure 1: Shows the changes in refugee populations across the top five refugee-hosting countries between 2008 and 2016. Figure 2: Shows the annual changes in refugee populations originating from the top five refugee-origin countries between 2008 and 2016.
 - `index.html` and `css/`: Main webpage for GitHub Pages hosting.
 - `PROPOSAL.md`, `AI_USAGE.md`: Your proposal and your AI usage statement.
 - `requirements.txt`: Python libraries your scripts need.
