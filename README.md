@@ -1,7 +1,12 @@
 # IE 421 - Data Science for Engineers Term Project (Please keep this main title in Readme as it is)
 
 ## The Global Refugee Landscape: Origins, Hosts, and Internal Displacement
-Project abstract. Should be around 180-200 words. No visuals here.
+Refugee movements around the world and the forced displacement of people do not occur at the same level everywhere.While some countries receive a significant numbers of refugees, others stand out as the regions from which refugees depart most frequently, and this distribution can vary over time. This project examines which countries refugees depart from, which countries they seek refuge in, and how this pattern has changed over the years.
+
+While preparing this project, we combined various data sources, including United Nations refugee data, World Bank statistics on GDP per capita based on population and purchasing power parity, and the IDMC’s reports on internal displacement. Using these datas, we analyze the relationships between refugee and displacement statistics and the economic conditions and population sizes of host countries. We also examine the main factors leading to the internal displacement of people within their own countries.
+
+Ultimately, this project aims to a better understanding of global migration dynamics, highlight differences and imbalances among countries, and provide meaningful insights into the challenges faced by different regions.
+
 
 ## Group Members
 Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (123203104)
