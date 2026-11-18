@@ -47,7 +47,9 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **How to regenerate:**
 
  ## Dataset 5: UNHCR and World Bank Integrated Dataset (unhcr_world_bank_origin_host_year.csv)
-- **Source and URL:** 
+- **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data)
+- World Bank Population | [Total Population](https://data.worldbank.org/indicator/SP.POP.TOTL)
+- World Bank GDP per Capita | [GDP per capita, PPP](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD) 
 - **License:**
 - **Date accessed:** 18 November 2026
 - **Time range and granularity:**
