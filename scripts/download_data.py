@@ -15,10 +15,11 @@ import requests
 import kagglehub
 
 
-BASE = Path(__file__).resolve().parents[1]
+BASE = Path("/content/IE421")
 RAW = BASE / "data" / "raw"
 
 RAW.mkdir(parents=True, exist_ok=True)
+
 
 SOURCES = {
     "UNHCR": "https://www.kaggle.com/datasets/unitednations/refugee-data",
