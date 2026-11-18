@@ -16,10 +16,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 ## Files 
 - `data/`: Contains the six cleaned and merged CSV files used in our analysis. Raw datasets are downloaded into `/content/IE421/data/raw/` during processing but are not uploaded to GitHub. More details about the datasets are provided in `data/README.md`.
 `data/README.md`.
-- `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data.
-- `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC.
-- `preprocess_data.py`: Cleans and prepares the datasets for analysis, including standardizing country codes.
-- `eda_notebook.ipynb`: Explores the UNHCR dataset, checks missing values, compares refugee-hosting and refugee-origin countries, and creates a heatmap and grouped bar chart.
+- `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data. `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC. `preprocess_data.py`: Cleans and prepares the datasets for analysis, including standardizing country codes. `eda_notebook.ipynb`: Explores the UNHCR dataset, checks missing values, compares refugee-hosting and refugee-origin countries, and creates a heatmap and grouped bar chart.
 - `visual/`: Figure 1: Shows the annual changes in refugee populations originating from the top five refugee-origin countries between 2008 and 2016. Figure 2: Shows the changes in refugee populations across the top five refugee-hosting countries between 2008 and 2016.
 - `index.html` and `css/`: Main webpage for GitHub Pages hosting.
 - `PROPOSAL.md`, `AI_USAGE.md`: Your proposal and your AI usage statement.
