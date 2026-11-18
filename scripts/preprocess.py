@@ -292,7 +292,7 @@ def join_host_indicators(unhcr, population, gdp):
     result = hosts.merge(
         population[JOIN_KEY + ["total_population"]], on=JOIN_KEY, how="left", validate="many_to_one"
     ).merge(
-        gdp[JOIN_KEY + ["gdp_per_capita_current_usd"]], on=JOIN_KEY, how="left", validate="many_to_one"
+        gdp[JOIN_KEY + ["gdp_per_capita_ppp"]], on=JOIN_KEY, how="left", validate="many_to_one"
     )
     if len(result) != len(hosts):
         raise ValueError("The join changed the number of UNHCR host-year rows.")
@@ -303,7 +303,7 @@ def join_host_indicators(unhcr, population, gdp):
     )
     print(f"UNHCR host-year rows: {len(result):,}")
     print(f"With population: {result['total_population'].notna().sum():,}")
-    print(f"With GDP per capita: {result['gdp_per_capita_current_usd'].notna().sum():,}")
+    print(f"With GDP per capita: {result['gdp_per_capita_ppp'].notna().sum():,}")
     print("Unmatched host labels:", sorted(result.loc[result["country_code"].isna(), "host_country"].unique()))
     return result
 
@@ -379,7 +379,7 @@ def main():
         population_path = find_input(
             raw, ["worldbankpopulation.csv", "API_SP.POP.TOTL*.csv"], "World Bank population"
         )
-        gdp_path = find_input(raw, ["API_NY.GDP.PCAP.CD*.csv"], "World Bank GDP per capita")
+        gdp_path = find_input(raw, ["API_NY.GDP.PCAP.PP.KD*.csv"], "World Bank GDP per capita"
         metadata_path = find_input(
             raw, ["Metadata_Country_API_SP.POP.TOTL*.csv"], "World Bank country metadata"
         )
@@ -389,7 +389,7 @@ def main():
 
         unhcr = clean_unhcr(read_unhcr_source(unhcr_path), REFUGEE_LABEL)
         population = clean_world_bank(population_path, "SP.POP.TOTL", metadata_path)
-        gdp = clean_world_bank(gdp_path, "NY.GDP.PCAP.CD", metadata_path)
+        gdp = clean_world_bank(gdp_path, "NY.GDP.PCAP.PP.KD", metadata_path)
         idmc = clean_idmc(idmc_path)
         joined = join_host_indicators(unhcr, population, gdp)
 
