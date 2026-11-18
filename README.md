@@ -3,8 +3,8 @@
 ## The Global Refugee Landscape: Origins, Hosts, and Internal Displacement
 Project abstract. Should be around 180-200 words. No visuals here.
 
-## Student Names
-Please fill this area with your names and student IDs.
+## Group Members
+Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (123203104)
 
 ## Files (Explain each of them with a sentence)
 - `data/`: Contains the datasets used. (Define your datasets here. The full description goes in the data card, `data/README.md`. Raw downloads stay in `data/raw/` and are not committed.)
