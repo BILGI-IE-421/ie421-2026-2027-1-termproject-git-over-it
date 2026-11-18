@@ -4,6 +4,6 @@ List every use of an AI assistant (ChatGPT, Claude, Copilot, Gemini, etc.) in th
 
 | Date | Tool | Task (what you asked) | Where it is used (file/section) | What you verified and how |
 |---|---|---|---|---|
-| | | | | |
+| 2026-11-18| | | | |
 
 Sections written entirely in our own words: data card, limitations, conclusions.
