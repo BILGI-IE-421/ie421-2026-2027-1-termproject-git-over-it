@@ -6,7 +6,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data)  
 - **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
@@ -17,7 +17,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **Source and URL:** World Bank Population | [Total Population](https://data.worldbank.org/indicator/SP.POP.TOTL) 
 - **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
@@ -28,7 +28,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **Source and URL:** World Bank GDP per Capita | [GDP per capita, PPP](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD) 
 - **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
@@ -39,7 +39,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **Source and URL:** IDMC Global Internal Displacement Database |[IDMC Displacement Data](https://www.internal-displacement.org/database/displacement-data/) 
 - **License:** [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO (CC BY-NC-SA 3.0 IGO)](https://creativecommons.org/licenses/by-nc-sa/3.0/igo/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
@@ -52,7 +52,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
  World Bank GDP per Capita | [GDP per capita, PPP](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD) 
 - **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/), [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
@@ -63,7 +63,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
  - **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data), IDMC Global Internal Displacement Database | [IDMC Displacement Data](https://www.internal-displacement.org/database/displacement-data/) 
 - **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/), [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 IGO (CC BY-NC-SA 3.0 IGO)](https://creativecommons.org/licenses/by-nc-sa/3.0/igo/)
 - **Date accessed:** 18 November 2026
-- **Time range and granularity:**
+- **Time range and granularity:** 2008–2016; annual, country-level data.
 - **Size:** 
 - **Columns used:**
 - **Known issues:**
