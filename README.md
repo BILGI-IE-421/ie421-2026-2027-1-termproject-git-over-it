@@ -15,7 +15,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 
 ## Files 
 - `data/`: Contains the six cleaned and merged CSV files used in our analysis. Raw datasets are downloaded into `/content/IE421/data/raw/` during processing but are not uploaded to GitHub. More details about the datasets are provided in `data/README.md`.
-`data/README.md`: Provides detailed information about the datasets, their sources, and how they are prepared.
+`data/README.md`.
 - `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data.
 - `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC.
 - `preprocess_data.py`: Cleans and prepares the datasets for analysis, including standardizing country codes.
