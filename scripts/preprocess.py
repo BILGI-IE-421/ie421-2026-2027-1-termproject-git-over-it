@@ -261,7 +261,57 @@ JOIN_KEY = ["country_code", "year"]
 def normalize_name(name):
     plain = unicodedata.normalize("NFKD", name.casefold())
     return re.sub(r"[^a-z0-9]", "", plain)
+def add_iso3_columns(unhcr, population):
 
+    unhcr = unhcr.copy()
+
+    # World Bank ülke isimleri ve ISO3 kodları
+    country_mapping = (
+        population[["country_name", "country_code"]]
+        .drop_duplicates()
+        .copy()
+    )
+
+    country_mapping["normalized_name"] = (
+        country_mapping["country_name"]
+        .map(normalize_name)
+    )
+
+    name_to_iso3 = (
+        country_mapping
+        .set_index("normalized_name")["country_code"]
+        .to_dict()
+    )
+
+    # UNHCR ev sahibi ülkeleri
+    unhcr["host_iso3"] = (
+        unhcr["host_country"]
+        .map(HOST_ALIASES)
+        .fillna(
+            unhcr["host_country"]
+            .map(normalize_name)
+            .map(name_to_iso3)
+        )
+    )
+
+    # UNHCR kaynak ülkeleri
+    unhcr["origin_iso3"] = (
+        unhcr["origin_country"]
+        .map(HOST_ALIASES)
+        .fillna(
+            unhcr["origin_country"]
+            .map(normalize_name)
+            .map(name_to_iso3)
+        )
+    )
+
+    print("Host ISO3 matched:",
+          unhcr["host_iso3"].notna().sum())
+
+    print("Origin ISO3 matched:",
+          unhcr["origin_iso3"].notna().sum())
+
+    return unhcr
 
 def join_host_indicators(unhcr, population, gdp):
     names = population[["country_code", "country_name"]].drop_duplicates()
@@ -388,10 +438,17 @@ def main():
         )
 
         unhcr = clean_unhcr(read_unhcr_source(unhcr_path), REFUGEE_LABEL)
-        population = clean_world_bank(population_path, "SP.POP.TOTL", metadata_path)
-        gdp = clean_world_bank(gdp_path, "NY.GDP.PCAP.PP.KD", metadata_path)
-        idmc = clean_idmc(idmc_path)
-        joined = join_host_indicators(unhcr, population, gdp)
+
+population = clean_world_bank(
+    population_path, "SP.POP.TOTL", metadata_path
+)
+
+# UNHCR için ISO3 kolonlarını oluştur
+unhcr = add_iso3_columns(unhcr, population)
+
+gdp = clean_world_bank(
+    gdp_path, "NY.GDP.PCAP.PP.KD", metadata_path
+)
 
         outputs = {
             "unhcr_clean.csv": unhcr,
