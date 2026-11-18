@@ -14,7 +14,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 [The Global Refugee Landscape: Origins, Hosts, and Internal Displacement](https://8767-m-s-use1b11-2x2n6fajjluzt-b.us-east1.prod.r.colab.dev/index.html#research)
 
 ## Files 
-- `data/`: Contains the six cleaned and merged CSV files used in our analysis. Raw datasets are downloaded into `/content/IE421/data/raw/` during processing but are not uploaded to GitHub. More details about the datasets are provided in `data/README.md`. `unhcr_clean.csv`: Contains cleaned refugee data from 2008 to 2016, including host countries, origin countries, refugee counts, and ISO3 codes.
+- `data/`: Contains the six cleaned and merged CSV files used in our analysis. Raw datasets are downloaded into `/content/IE421/data/raw/` during processing but are not uploaded to GitHub. More details about the datasets are provided in `data/README.md`.
 `data/README.md`: Provides detailed information about the datasets, their sources, and how they are prepared.
 - `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data.
 - `download_data.py`: Downloads the raw datasets from UNHCR, the World Bank, and IDMC.
