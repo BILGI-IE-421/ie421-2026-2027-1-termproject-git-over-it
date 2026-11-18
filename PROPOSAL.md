@@ -21,7 +21,7 @@ Refugee populations are not equally distributed around the world. Some countries
 
 ## Our questions
 
-1. What is the global distribution of refugees across countries of origin and asylum, and how has it changed over time?
+1. What is the global distribution of refugees across countries of origin and asylum, and how has it changed between 2008-2016?
 
 2. How are refugee populations related to the population sizes and economic conditions of host countries?
 
