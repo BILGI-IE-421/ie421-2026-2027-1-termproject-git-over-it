@@ -136,7 +136,7 @@ YEARS = [str(year) for year in range(2008, 2017)]
 IDENTIFIERS = ["Country Name", "Country Code", "Indicator Code"]
 INDICATORS = {
     "SP.POP.TOTL": "total_population",
-    "NY.GDP.PCAP.CD": "gdp_per_capita_ppp",
+    "NY.GDP.PCAP.PP.KD": "gdp_per_capita_ppp",
 }
 
 
@@ -388,9 +388,15 @@ def clean_idmc(path):
         raise ValueError(f"{path.name}: missing IDMC country or territory identifier.")
     if data.duplicated(JOIN_KEY).any():
         raise ValueError(f"{path.name}: conflicting IDMC records for a country code and year.")
-    if set(data["year"]) != set(range(2008, 2017)):
-        raise ValueError(f"{path.name}: expected all nine IDMC years from 2008 through 2016.")
+    expected_years = set(range(2008, 2017))
+available_years = set(data["year"])
 
+missing_years = sorted(expected_years - available_years)
+
+if missing_years:
+    print("WARNING: Missing IDMC years:", missing_years)
+else:
+    print("All years from 2008 to 2016 are present.")
     stock_columns = ["conflict_stock_people", "disaster_stock_people"]
     for column in stock_columns:
         counts = data[column]
@@ -402,7 +408,52 @@ def clean_idmc(path):
         print(f"IDMC {column}: {data[column].notna().sum():,} reported, {data[column].isna().sum():,} missing.")
     print(f"IDMC rows with both stocks reported: {data[stock_columns].notna().all(axis=1).sum():,}.")
     return data.sort_values(JOIN_KEY, ignore_index=True)
+def join_origin_idmc(unhcr, idmc):
 
+    # Refugees grouped by origin country and year
+    origin_data = (
+        unhcr.dropna(subset=["origin_iso3"])
+        .groupby(["origin_iso3", "year"], as_index=False)
+        ["refugee_count"]
+        .sum(min_count=1)
+    )
+
+    origin_data = origin_data.rename(columns={
+        "refugee_count": "refugees_from_origin"
+    })
+
+    # Merge refugee origins with internal displacement
+    result = origin_data.merge(
+        idmc[
+            [
+                "country_code",
+                "year",
+                "conflict_stock_people",
+                "disaster_stock_people"
+            ]
+        ],
+        left_on=["origin_iso3", "year"],
+        right_on=["country_code", "year"],
+        how="left",
+        validate="one_to_one",
+        indicator=True
+    )
+
+    print("\nUNHCR + IDMC MERGE")
+    print("Origin-year rows:", len(origin_data))
+    print("Matched country-year rows:",
+          (result["_merge"] == "both").sum())
+    print("Unmatched country-year rows:",
+          (result["_merge"] == "left_only").sum())
+
+    print("Conflict stock available:",
+          result["conflict_stock_people"].notna().sum())
+    print("Disaster stock available:",
+          result["disaster_stock_people"].notna().sum())
+
+    result = result.drop(columns="_merge")
+
+    return result
 
 def find_input(directory, patterns, label):
     matches = sorted({path for pattern in patterns for path in directory.glob(pattern) if path.is_file()})
