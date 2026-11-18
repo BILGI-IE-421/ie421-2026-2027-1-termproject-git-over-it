@@ -25,3 +25,45 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **How to regenerate:**
 
 ## Dataset 3: World Bank GDP per Capita PPP (worldbank_gdp_clean.csv)
+- **Source and URL:** 
+- **License:**
+- **Date accessed:**
+- **Time range and granularity:**
+- **Size:** 
+- **Columns used:**
+- **Known issues:**
+- **Cleaning decisions and why:**
+- **How to regenerate:**
+
+## Dataset 4: IDMC Cleaned Internal Displacement Data (idmc_clean.csv)
+- **Source and URL:** 
+- **License:**
+- **Date accessed:**
+- **Time range and granularity:**
+- **Size:** 
+- **Columns used:**
+- **Known issues:**
+- **Cleaning decisions and why:**
+- **How to regenerate:**
+
+ ## Dataset 5: UNHCR and World Bank Integrated Dataset (unhcr_world_bank_origin_host_year.csv)
+- **Source and URL:** 
+- **License:**
+- **Date accessed:**
+- **Time range and granularity:**
+- **Size:** 
+- **Columns used:**
+- **Known issues:**
+- **Cleaning decisions and why:**
+- **How to regenerate:**
+
+ ## Dataset 6: UNHCR and IDMC Integrated Dataset (unhcr_idmc_origin_year.csv)
+ - **Source and URL:** 
+- **License:**
+- **Date accessed:**
+- **Time range and granularity:**
+- **Size:** 
+- **Columns used:**
+- **Known issues:**
+- **Cleaning decisions and why:**
+- **How to regenerate:**
