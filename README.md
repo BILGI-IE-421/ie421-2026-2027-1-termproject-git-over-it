@@ -20,8 +20,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 - `requirements.txt`: Python libraries your scripts need.
 - `.github/`: The automatic repository check. Leave it as it is.
 
-## How to run (from the repository root)
-List the commands that reproduce your results, in the order they must be run.
+## How to run
 ```
 pip install -r requirements.txt
 python scripts/download_data.py
