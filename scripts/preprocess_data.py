@@ -484,16 +484,30 @@ def find_input(directory, patterns, label):
     return matches[0]
 
 
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+
     parser.add_argument(
-        "--raw-dir", type=Path, default=Path("data/raw")
+        "--raw-dir",
+        type=Path,
+        default=Path("/content/IE421/data/raw")
     )
+
     parser.add_argument(
-        "--output-dir", type=Path, default=Path("data/processed")
+        "--output-dir",
+        type=Path,
+        default=Path("/content/IE421/data/processed")
     )
-    args = parser.parse_args()
+
+    args, _ = parser.parse_known_args()
+
     raw = args.raw_dir
+
+    print("Reading raw files from:", raw.resolve())
+    print("Saving processed files to:", args.output_dir.resolve())
+
 
     try:
         if raw.resolve() == args.output_dir.resolve():
