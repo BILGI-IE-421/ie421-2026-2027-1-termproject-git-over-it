@@ -13,7 +13,7 @@ Ece Özkanlı (123203036) · Sıla Doğan (122203077) · Yağmur Battal (1232031
 
 [The Global Refugee Landscape: Origins, Hosts, and Internal Displacement](https://8767-m-s-use1b11-2x2n6fajjluzt-b.us-east1.prod.r.colab.dev/index.html#research)
 
-## Files (Explain each of them with a sentence)
+## Files 
 - `data/`: Contains the datasets used in our project. Raw data is stored in `data/raw/`, while cleaned datasets are used for analysis.`unhcr_clean.csv`: Contains cleaned refugee data from 2008 to 2016, including host countries, origin countries, refugee counts, and ISO3 codes.
 `data/README.md`: Provides detailed information about the datasets, their sources, and how they are prepared.
 - `scripts/`: Contains the Python scripts used to download, clean, explore, and visualize the data.
