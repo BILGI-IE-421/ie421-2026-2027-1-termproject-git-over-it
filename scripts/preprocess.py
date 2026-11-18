@@ -388,7 +388,7 @@ def clean_idmc(path):
         raise ValueError(f"{path.name}: missing IDMC country or territory identifier.")
     if data.duplicated(JOIN_KEY).any():
         raise ValueError(f"{path.name}: conflicting IDMC records for a country code and year.")
-        expected_years = set(range(2008, 2017))
+    expected_years = set(range(2008, 2017))
     available_years = set(data["year"])
 
     missing_years = sorted(expected_years - available_years)
@@ -487,53 +487,112 @@ def find_input(directory, patterns, label):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--raw-dir", type=Path, default=Path("data/raw"))
-    parser.add_argument("--output-dir", type=Path, default=Path("data/processed"))
+    parser.add_argument(
+        "--raw-dir", type=Path, default=Path("data/raw")
+    )
+    parser.add_argument(
+        "--output-dir", type=Path, default=Path("data/processed")
+    )
     args = parser.parse_args()
     raw = args.raw_dir
 
     try:
         if raw.resolve() == args.output_dir.resolve():
-            raise ValueError("The input and output directories must differ.")
-        unhcr_path = find_input(raw, ["time_series.csv"], "UNHCR")
+            raise ValueError(
+                "Input and output directories must differ."
+            )
+
+        # Find raw files
+        unhcr_path = find_input(
+            raw, ["time_series.csv"], "UNHCR"
+        )
+
         population_path = find_input(
-            raw, ["worldbankpopulation.csv", "API_SP.POP.TOTL*.csv"], "World Bank population"
+            raw,
+            ["worldbankpopulation.csv", "API_SP.POP.TOTL*.csv"],
+            "World Bank population"
         )
-        gdp_path = find_input(raw, ["API_NY.GDP.PCAP.PP.KD*.csv"], "World Bank GDP per capita"
+
+        gdp_path = find_input(
+            raw,
+            ["API_NY.GDP.PCAP.PP.KD*.csv"],
+            "World Bank GDP PPP"
+        )
+
         metadata_path = find_input(
-            raw, ["Metadata_Country_API_SP.POP.TOTL*.csv"], "World Bank country metadata"
+            raw,
+            ["Metadata_Country_API_SP.POP.TOTL*.csv"],
+            "World Bank country metadata"
         )
+
         idmc_path = find_input(
-            raw, ["IDMC_Internal_Displacement_Conflict-Violence_Disasters*.xlsx"], "IDMC"
+            raw,
+            ["IDMC_Internal_Displacement_Conflict-Violence_Disasters*.xlsx"],
+            "IDMC"
         )
 
-        unhcr = clean_unhcr(read_unhcr_source(unhcr_path), REFUGEE_LABEL)
+        # Clean datasets
+        unhcr = clean_unhcr(
+            read_unhcr_source(unhcr_path),
+            REFUGEE_LABEL
+        )
 
-population = clean_world_bank(
-    population_path, "SP.POP.TOTL", metadata_path
-)
+        population = clean_world_bank(
+            population_path,
+            "SP.POP.TOTL",
+            metadata_path
+        )
 
-# UNHCR için ISO3 kolonlarını oluştur
-unhcr = add_iso3_columns(unhcr, population)
+        unhcr = add_iso3_columns(unhcr, population)
 
-gdp = clean_world_bank(
-    gdp_path, "NY.GDP.PCAP.PP.KD", metadata_path
-)
+        gdp = clean_world_bank(
+            gdp_path,
+            "NY.GDP.PCAP.PP.KD",
+            metadata_path
+        )
 
+        idmc = clean_idmc(idmc_path)
+
+        # Merge datasets
+        joined = join_host_indicators(
+            unhcr, population, gdp
+        )
+
+        origin_idmc = join_origin_idmc(
+            unhcr, idmc
+        )
+
+        # Save outputs
         outputs = {
             "unhcr_clean.csv": unhcr,
             "worldbank_population_clean.csv": population,
             "worldbank_gdp_clean.csv": gdp,
             "idmc_clean.csv": idmc,
             "unhcr_world_bank_host_year.csv": joined,
+            "unhcr_idmc_origin_year.csv": origin_idmc,
         }
-        args.output_dir.mkdir(parents=True, exist_ok=True)
+
+        args.output_dir.mkdir(
+            parents=True, exist_ok=True
+        )
+
         for name, table in outputs.items():
             target = args.output_dir / name
             table.to_csv(target, index=False)
-            print(f"Saved {target}: {len(table):,} rows × {len(table.columns)} columns.")
-    except (OSError, UnicodeError, ValueError, csv.Error, ImportError) as error:
-        parser.exit(1, f"Data preparation failed: {error}\n")
+
+            print(
+                f"Saved {target}: "
+                f"{len(table):,} rows x "
+                f"{len(table.columns)} columns."
+            )
+
+    except (
+        OSError, UnicodeError, ValueError,
+        KeyError, csv.Error, ImportError
+    ) as error:
+        parser.exit(
+            1, f"Data preparation failed: {error}\n"
+        )
 
 
 if __name__ == "__main__":
