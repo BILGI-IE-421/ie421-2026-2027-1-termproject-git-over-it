@@ -26,7 +26,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 
 ## Dataset 3: World Bank GDP per Capita PPP (worldbank_gdp_clean.csv)
 - **Source and URL:** World Bank GDP per Capita | [GDP per capita, PPP](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD) 
-- **License:**
+- **License:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - **Date accessed:** 18 November 2026
 - **Time range and granularity:**
 - **Size:** 
