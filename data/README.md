@@ -4,7 +4,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 
 ## Dataset 1: UNHCR Cleaned Refugee Data (unhcr_clean.csv)
 - **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data)  
-- **License:**
+- **License:** CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Date accessed:**
 - **Time range and granularity:**
 - **Size:** 
