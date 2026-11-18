@@ -1,4 +1,4 @@
-# IE 421 - Data Science for Engineers Term Project (Please keep this main title in Readme as it is)
+# IE 421 - Data Science for Engineers Term Project 
 
 ## The Global Refugee Landscape: Origins, Hosts, and Internal Displacement
 Refugee movements around the world and the forced displacement of people do not occur at the same level everywhere.While some countries receive a significant numbers of refugees, others stand out as the regions from which refugees depart most frequently, and this distribution can vary over time. 
