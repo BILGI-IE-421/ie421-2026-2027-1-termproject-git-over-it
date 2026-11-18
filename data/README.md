@@ -14,7 +14,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **How to regenerate:**
 
 ## Dataset 2: World Bank Population (worldbank_population_clean.csv)
-- **Source and URL:** 
+- **Source and URL:** World Bank Population | [Total Population](https://data.worldbank.org/indicator/SP.POP.TOTL) 
 - **License:**
 - **Date accessed:** 18 November 2026
 - **Time range and granularity:**
