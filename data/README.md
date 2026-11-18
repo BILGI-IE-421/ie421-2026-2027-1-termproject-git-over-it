@@ -60,7 +60,7 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **How to regenerate:**
 
  ## Dataset 6: UNHCR and IDMC Integrated Dataset (unhcr_idmc_origin_year.csv)
- - **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data), IDMC Global Internal Displacement Database|[IDMC Displacement Data](https://www.internal-displacement.org/database/displacement-data/) 
+ - **Source and URL:** UNHCR Refugee Data | [UNHCR Refugee Data](https://www.kaggle.com/datasets/unitednations/refugee-data), IDMC Global Internal Displacement Database| [IDMC Displacement Data](https://www.internal-displacement.org/database/displacement-data/) 
 - **License:**
 - **Date accessed:** 18 November 2026
 - **Time range and granularity:**
