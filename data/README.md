@@ -7,11 +7,11 @@ This project uses four datasets from three sources: UNHCR refugee data (Dataset 
 - **License:** [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
 - **Date accessed:** 18 November 2026
 - **Time range and granularity:** 2008–2016; annual, country-level data.
-- **Size:** 
-- **Columns used:**
-- **Known issues:**
-- **Cleaning decisions and why:**
-- **How to regenerate:**
+- **Size:** 49,798 rows × 7 columns.
+- **Columns used:** year, host_country, origin_country, population_type, refugee_count, host_iso3, origin_iso3
+- **Known issues:** Missing refugee counts and unmatched country or territory names in ISO3 mapping. Some records contain duplicate country-year combinations, requiring reconciliation. Missing values may affect country comparisons and annual totals.
+- **Cleaning decisions and why:** Filtered the data to 2008–2016 and the refugee population category. Removed exact duplicate records, converted refugee counts to numeric values, and added ISO3 country codes to support merging with other datasets. Missing refugee counts were preserved as missing rather than replaced with zero. 
+- **How to regenerate:** Run scripts/download_data.py to download the raw datasets into data/raw/, then run scripts/preprocess_data.py to generate the cleaned datasets in data/processed/.
 
 ## Dataset 2: World Bank Population (worldbank_population_clean.csv)
 - **Source and URL:** World Bank Population | [Total Population](https://data.worldbank.org/indicator/SP.POP.TOTL) 
