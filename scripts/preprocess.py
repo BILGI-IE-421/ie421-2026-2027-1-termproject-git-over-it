@@ -388,25 +388,44 @@ def clean_idmc(path):
         raise ValueError(f"{path.name}: missing IDMC country or territory identifier.")
     if data.duplicated(JOIN_KEY).any():
         raise ValueError(f"{path.name}: conflicting IDMC records for a country code and year.")
-    expected_years = set(range(2008, 2017))
-available_years = set(data["year"])
+        expected_years = set(range(2008, 2017))
+    available_years = set(data["year"])
 
-missing_years = sorted(expected_years - available_years)
+    missing_years = sorted(expected_years - available_years)
 
-if missing_years:
-    print("WARNING: Missing IDMC years:", missing_years)
-else:
-    print("All years from 2008 to 2016 are present.")
-    stock_columns = ["conflict_stock_people", "disaster_stock_people"]
+    if missing_years:
+        print("WARNING: Missing IDMC years:", missing_years)
+    else:
+        print("All years from 2008 to 2016 are present.")
+
+    stock_columns = [
+        "conflict_stock_people",
+        "disaster_stock_people"
+    ]
+
     for column in stock_columns:
         counts = data[column]
         number = counts.str.fullmatch(r"[0-9]+")
         invalid = counts.ne("") & ~number
+
         if invalid.any():
-            raise ValueError(f"{path.name}: invalid IDMC values in {column}.")
+            raise ValueError(
+                f"{path.name}: invalid IDMC values in {column}."
+            )
+
         data[column] = counts.where(number).astype("Int64")
-        print(f"IDMC {column}: {data[column].notna().sum():,} reported, {data[column].isna().sum():,} missing.")
-    print(f"IDMC rows with both stocks reported: {data[stock_columns].notna().all(axis=1).sum():,}.")
+
+        print(
+            f"IDMC {column}: "
+            f"{data[column].notna().sum():,} reported, "
+            f"{data[column].isna().sum():,} missing."
+        )
+
+    print(
+        "IDMC rows with both stocks reported:",
+        data[stock_columns].notna().all(axis=1).sum()
+    )
+
     return data.sort_values(JOIN_KEY, ignore_index=True)
 def join_origin_idmc(unhcr, idmc):
 
