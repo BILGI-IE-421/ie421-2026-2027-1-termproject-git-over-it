@@ -1,4 +1,4 @@
-"""Prepare the four refugee project datasets for 2008–2016 (inclusive)."""
+"""Prepare the four refugee project datasets for 2008–2016."""
 
 import argparse
 import csv
