@@ -1,6 +1,5 @@
 # AI usage statement
 
-List every use of an AI assistant (ChatGPT, Claude, Copilot, Gemini, etc.) in this project. Every member must be able to explain all submitted code and figures.
 
 | Date | Tool | Task (what you asked) | Where it is used (file/section) | What you verified and how |
 |---|---|---|---|---|
